@@ -1,0 +1,28 @@
+services:
+  msr:
+    image: ${CONTAINER_REGISTRY_URL}/${CONTAINER_IMAGE_REPOSITORY}:${CONTAINER_IMAGE_TAG}
+    ports:
+      - ${HOST_PORT_PREFIX}55:5555
+    hostname: wm-tools-dev1
+    volumes:
+      - ${HOST_MSR_LICENSE_FILE}:${GUEST_LICENSE_FILE_MOUNT_POINT}
+      - ./application.properties:${GUEST_APP_PROPS_MOUNT_POINT}
+      # Our Code
+      - ../../code/is-packages/WxAssert/:${GUEST_IS_HOME}/packages/WxAssert/
+      - ../../code/is-packages/WxAssertTest/:${GUEST_IS_HOME}/packages/WxAssertTest/
+      - ../../code/is-packages/WxIsTestTools/:${GUEST_IS_HOME}/packages/WxIsTestTools/
+      - ../../code/is-packages/WxIsTestToolsLocalTest/:${GUEST_IS_HOME}/packages/WxIsTestToolsLocalTest/
+      - ../../code/is-packages/WxSimpleConfig/:${GUEST_IS_HOME}/packages/WxSimpleConfig/
+      - ../../code/is-packages/WxSimpleConfigTest/:${GUEST_IS_HOME}/packages/WxSimpleConfigTest/
+      - ../../code/is-packages/WxTestDataGen/:${GUEST_IS_HOME}/packages/WxTestDataGen/
+      - ../../code/is-packages/WzAssert/:${GUEST_IS_HOME}/packages/WzAssert/
+      - ../../code/is-packages/WzAssertLocalTest/:${GUEST_IS_HOME}/packages/WzAssertLocalTest/
+      - ../../code/is-packages/WzMocks/:${GUEST_IS_HOME}/packages/WzMocks/
+      - ../../code/is-packages/WzMocksLocalTest/:${GUEST_IS_HOME}/packages/WzMocksLocalTest/
+      - ../../code/is-packages/WzTestDataGen/:${GUEST_IS_HOME}/packages/WzTestDataGen/
+      - ../../code/is-packages/WzTestTools/:${GUEST_IS_HOME}/packages/WzTestTools/
+      - ../../code/is-packages/WzTestToolsLocalTest/:${GUEST_IS_HOME}/packages/WzTestToolsLocalTest/
+    environment:
+      - SAG_IS_LICENSE_FILE=${GUEST_LICENSE_FILE_MOUNT_POINT}
+      - SAG_IS_CONFIG_PROPERTIES=${GUEST_APP_PROPS_MOUNT_POINT}
+      - GUEST_IS_HOME

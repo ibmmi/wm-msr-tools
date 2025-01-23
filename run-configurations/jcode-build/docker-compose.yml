@@ -1,0 +1,18 @@
+services:
+  msr:
+    image: ${MSR_CONTAINER_IMAGE}
+    hostname: wm-tools-jcode
+    volumes:
+      # Our Code
+      - ../../code/is-packages/WzAssert/:${GUEST_IS_HOME}/packages/WzAssert/
+      - ../../code/is-packages/WzAssertLocalTest/:${GUEST_IS_HOME}/packages/WzAssertLocalTest/
+      - ../../code/is-packages/WzMocks/:${GUEST_IS_HOME}/packages/WzMocks/
+      - ../../code/is-packages/WzMocksLocalTest/:${GUEST_IS_HOME}/packages/WzMocksLocalTest/
+      - ../../code/is-packages/WzTestDataGen/:${GUEST_IS_HOME}/packages/WzTestDataGen/
+      - ../../code/is-packages/WzTestTools/:${GUEST_IS_HOME}/packages/WzTestTools/
+      - ../../code/is-packages/WzTestToolsLocalTest/:${GUEST_IS_HOME}/packages/WzTestToolsLocalTest/
+      # scripts
+      - ./scripts/:/mnt/scripts/
+    environment:
+      - GUEST_IS_HOME
+    entrypoint: /mnt/scripts/entrypoint.sh
