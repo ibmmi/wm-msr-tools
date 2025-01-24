@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Values version="2.0">
-  <value name="node_type">interface</value>
-  <value name="node_nsName">wx.simpleConfig.util.j</value>
-  <value name="is_public">false</value>
-  <value name="encodeutf8">true</value>
   <value name="shared">Ci8vIGxvY2FsIHNlY3JldCBtYW5hZ2VtZW50CnN0YXRpYyBmaW5hbCBTdHJpbmcgbG9jYWxTZWNy
 ZXQgPSBnZXRMb2NhbFNlY3JldCgpOwpzdGF0aWMgZmluYWwgU3RyaW5nIGdldExvY2FsU2VjcmV0
 KCl7CglTdHJpbmcgc1NlY3JldCA9ICJtYW5hZ2UiOwoJaWYoU3lzdGVtLmdldGVudigpLmNvbnRh
@@ -115,10 +111,8 @@ cnRIb3N0TmFtZSgpewoJU3RyaW5nIHMgPSBudWxsOwoJdHJ5IHsKCQlzID0gamF2YS5uZXQuSW5l
 dEFkZHJlc3MuZ2V0TG9jYWxIb3N0KCkuZ2V0SG9zdE5hbWUoKTsKCX0gY2F0Y2ggKFVua25vd25I
 b3N0RXhjZXB0aW9uIGUpIHsKCQkvLyBUT0RPIEF1dG8tZ2VuZXJhdGVkIGNhdGNoIGJsb2NrCgkJ
 ZS5wcmludFN0YWNrVHJhY2UoKTsKCX0KCXJldHVybiBzOwp9CgpzdGF0aWMgZmluYWwgcHJpdmF0
-ZSBTdHJpbmcgY3J0SG9zdE5hbWU9Z2V0Q3J0SG9zdE5hbWUoKTs=</value>
-  <value name="extends"></value>
-  <array name="implements" type="value" depth="1">
-  </array>
+ZSBTdHJpbmcgY3J0SG9zdE5hbWU9Z2V0Q3J0SG9zdE5hbWUoKTsK</value>
+  <value name="encodeutf8">true</value>
   <array name="imports" type="value" depth="1">
     <value>java.io.UnsupportedEncodingException</value>
     <value>java.security.InvalidAlgorithmParameterException</value>
