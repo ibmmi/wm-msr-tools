@@ -4,7 +4,7 @@
   <record name="record" javaclass="com.wm.util.Values">
     <value name="node_type">record</value>
     <value name="node_subtype">unknown</value>
-    <value name="node_nsName">wx.simpleConfig.remote:isAliasConfig</value>
+    <value name="node_nsName">WzP.Config.Declare.remote:isAliasConfig</value>
     <value name="node_pkg">Virgo</value>
     <value name="node_comment"></value>
     <value name="is_public">false</value>
