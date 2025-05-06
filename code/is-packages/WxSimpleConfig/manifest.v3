@@ -9,7 +9,9 @@
   </record>
   <null name="shutdown_services"/>
   <null name="replication_services"/>
-  <null name="requires"/>
+  <record name="requires" javaclass="com.wm.util.Values">
+    <value name="WzPUtil">*</value>
+  </record>
   <value name="listACL">Default</value>
   <value name="webappLoad">yes</value>
   <value name="name">WxSimpleConfig</value>
@@ -19,4 +21,24 @@
   <value name="jvm_version">1.8.0_181</value>
   <null name="publisher"/>
   <value name="patch_nums"></value>
+  <value name="reloadWithDependentPackage">yes</value>
+  <null name="created_date"/>
+  <array name="extendedProperties" type="record" depth="1">
+    <record javaclass="com.wm.util.Values">
+      <value name="key">displayName</value>
+      <value name="value"></value>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="key">trusted</value>
+      <value name="value">no</value>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="key">status</value>
+      <value name="value">Development</value>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="key">tags</value>
+      <value name="value"></value>
+    </record>
+  </array>
 </Values>

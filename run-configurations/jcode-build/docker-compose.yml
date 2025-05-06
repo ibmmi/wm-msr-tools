@@ -8,6 +8,8 @@ services:
       - ../../code/is-packages/WxSimpleConfigTest/:${GUEST_IS_HOME}/packages/WxSimpleConfigTest/
       - ../../code/is-packages/WzPConfig/:${GUEST_IS_HOME}/packages/WzPConfig/
       - ../../code/is-packages/WzPConfigLocalTest/:${GUEST_IS_HOME}/packages/WzPConfigLocalTest/
+      - ../../code/is-packages/WzPUtil/:${GUEST_IS_HOME}/packages/WzPUtil/
+      - ../../code/is-packages/WzPUtilLocalTest/:${GUEST_IS_HOME}/packages/WzPUtilLocalTest/
       - ../../code/is-packages/WzTAssert/:${GUEST_IS_HOME}/packages/WzTAssert/
       - ../../code/is-packages/WzTAssertLocalTest/:${GUEST_IS_HOME}/packages/WzTAssertLocalTest/
       - ../../code/is-packages/WzTDataGen/:${GUEST_IS_HOME}/packages/WzTDataGen/

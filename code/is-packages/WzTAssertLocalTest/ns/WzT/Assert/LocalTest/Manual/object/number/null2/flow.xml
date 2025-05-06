@@ -5,7 +5,7 @@
 
   <!-- nodes -->
 
-<INVOKE TIMEOUT="" SERVICE="wz.utils.test.generators:getNull" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+<INVOKE TIMEOUT="" SERVICE="WzT.DataGen:getNull" VALIDATE-IN="$none" VALIDATE-OUT="$none">
   <COMMENT></COMMENT>
 </INVOKE>
 

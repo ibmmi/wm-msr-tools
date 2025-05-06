@@ -26,6 +26,52 @@ public final class object
 
 
 
+	public static final void isInteger (IData pipeline)
+        throws ServiceException
+	{
+		// --- <<IS-START(isInteger)>> ---
+		// @sigtype java 3.5
+		// [i] object:0:optional object
+		// [i] field:0:optional label
+		// [o] field:0:required bAssertionResult
+		boolean bResult=false;
+		// pipeline
+		IDataCursor pipelineCursor = pipeline.getCursor();
+			final boolean bExists = pipelineCursor.first("object");
+			Object	object = null;
+			if(bExists)
+				object = IDataUtil.get( pipelineCursor, "object" );
+			final String label = pipelineCursor.first("label")?(String)IDataUtil.get( pipelineCursor, "label" ):"isNumber";
+		pipelineCursor.destroy();
+		
+		
+		if (!bExists){
+			JournalLogger.log(LOG_CODE, LOG_FACILITY, JournalLogger.WARNING, LOG_PREFIX+" "+label, 
+					"Failed: No input received");
+		}
+		else if( null == object ){
+			JournalLogger.log(LOG_CODE, LOG_FACILITY, JournalLogger.WARNING, LOG_PREFIX+" "+label, 
+					"Failed: Null object received");
+		}else if (object instanceof Integer ){
+			bResult = true;
+			JournalLogger.log(LOG_CODE, LOG_FACILITY, JournalLogger.INFO, LOG_PREFIX+" "+label, 
+					"OK: Assertion passed!");
+		}else{
+			JournalLogger.log(LOG_CODE, LOG_FACILITY, JournalLogger.WARNING, LOG_PREFIX+" "+label
+											, "Failed: Received object is not an integer, class is " 
+											+ object.getClass().getCanonicalName());
+		}
+		// pipeline
+		pipelineCursor = pipeline.getCursor();
+		IDataUtil.put( pipelineCursor, "bAssertionResult", "" + bResult );
+		pipelineCursor.destroy();
+		// --- <<IS-END>> ---
+
+                
+	}
+
+
+
 	public static final void isNumber (IData pipeline)
         throws ServiceException
 	{

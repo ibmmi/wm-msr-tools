@@ -1,4 +1,4 @@
-package wz.utils.test;
+package WzT;
 
 // -----( IS Java Code Template v1.2
 
@@ -9,19 +9,35 @@ import com.wm.app.b2b.server.ServiceException;
 // --- <<IS-START-IMPORTS>> ---
 // --- <<IS-END-IMPORTS>> ---
 
-public final class generators
+public final class DataGen
 
 {
 	// ---( internal utility methods )---
 
-	final static generators _instance = new generators();
+	final static DataGen _instance = new DataGen();
 
-	static generators _newInstance() { return new generators(); }
+	static DataGen _newInstance() { return new DataGen(); }
 
-	static generators _cast(Object o) { return (generators)o; }
+	static DataGen _cast(Object o) { return (DataGen)o; }
 
 	// ---( server methods )---
 
+
+
+
+	public static final void getFalseBoolean (IData pipeline)
+        throws ServiceException
+	{
+		// --- <<IS-START(getFalseBoolean)>> ---
+		// @sigtype java 3.5
+		// [o] object:0:required nullObject
+		final IDataCursor pipelineCursor = pipeline.getCursor();
+		IDataUtil.put( pipelineCursor, "bObjFalse", Boolean.valueOf(false) );
+		pipelineCursor.destroy();
+		// --- <<IS-END>> ---
+
+                
+	}
 
 
 
