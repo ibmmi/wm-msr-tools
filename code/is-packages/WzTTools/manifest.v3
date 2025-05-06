@@ -7,11 +7,8 @@
   <null name="startup_services"/>
   <null name="shutdown_services"/>
   <null name="replication_services"/>
-  <value name="listACL">Default</value>
+  <null name="requires"/>
+  <null name="listACL"/>
   <value name="webappLoad">yes</value>
   <value name="reloadWithDependentPackage">yes</value>
-  <null name="build"/>
-  <null name="description"/>
-  <null name="created_date"/>
-  <null name="extendedProperties"/>
 </Values>

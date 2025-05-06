@@ -6,15 +6,15 @@ services:
       # Our Code
       - ../../code/is-packages/WxSimpleConfig/:${GUEST_IS_HOME}/packages/WxSimpleConfig/
       - ../../code/is-packages/WxSimpleConfigTest/:${GUEST_IS_HOME}/packages/WxSimpleConfigTest/
-      - ../../code/is-packages/WzAssert/:${GUEST_IS_HOME}/packages/WzAssert/
-      - ../../code/is-packages/WzAssertLocalTest/:${GUEST_IS_HOME}/packages/WzAssertLocalTest/
-      - ../../code/is-packages/WzMocks/:${GUEST_IS_HOME}/packages/WzMocks/
-      - ../../code/is-packages/WzMocksLocalTest/:${GUEST_IS_HOME}/packages/WzMocksLocalTest/
-      - ../../code/is-packages/WzSimpleConfig/:${GUEST_IS_HOME}/packages/WzSimpleConfig/
-      - ../../code/is-packages/WzSimpleConfigLocalTest/:${GUEST_IS_HOME}/packages/WzSimpleConfigLocalTest/
-      - ../../code/is-packages/WzTestDataGen/:${GUEST_IS_HOME}/packages/WzTestDataGen/
-      - ../../code/is-packages/WzTestTools/:${GUEST_IS_HOME}/packages/WzTestTools/
-      - ../../code/is-packages/WzTestToolsLocalTest/:${GUEST_IS_HOME}/packages/WzTestToolsLocalTest/
+      - ../../code/is-packages/WzPConfig/:${GUEST_IS_HOME}/packages/WzPConfig/
+      - ../../code/is-packages/WzPConfigLocalTest/:${GUEST_IS_HOME}/packages/WzPConfigLocalTest/
+      - ../../code/is-packages/WzTAssert/:${GUEST_IS_HOME}/packages/WzTAssert/
+      - ../../code/is-packages/WzTAssertLocalTest/:${GUEST_IS_HOME}/packages/WzTAssertLocalTest/
+      - ../../code/is-packages/WzTDataGen/:${GUEST_IS_HOME}/packages/WzTDataGen/
+      - ../../code/is-packages/WzTMocks/:${GUEST_IS_HOME}/packages/WzTMocks/
+      - ../../code/is-packages/WzTMocksLocalTest/:${GUEST_IS_HOME}/packages/WzTMocksLocalTest/
+      - ../../code/is-packages/WzTTools/:${GUEST_IS_HOME}/packages/WzTTools/
+      - ../../code/is-packages/WzTToolsLocalTest/:${GUEST_IS_HOME}/packages/WzTToolsLocalTest/
       # scripts
       - ./scripts/:/mnt/scripts/
     environment:
