@@ -126,6 +126,7 @@ public final class object
 	private final static int LOG_CODE=4;
 	private final static int LOG_FACILITY=90;
 	private final static String LOG_PREFIX="Object Assertions";
+		
 	// --- <<IS-END-SHARED>> ---
 }
 

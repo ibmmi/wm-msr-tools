@@ -17,3 +17,8 @@ With the transition from Software AG to IBM and some lessons learned, the reposi
 - The repository MUST not contain any form of compiled artifact, thus no `.class`, `.frag`, `.jar`, `.zip` and similar files. These are either built or recovered ad build time from source, like for example from the public maven repository
   - Downloading binaries MUST guarantee the file integrity with cryptographic hashes like sha256
 - Each package has a corresponding "${Name}LocalTest" package that is used for testing purposes and not intended for final production deployment.
+
+## Remember
+
+This repo does not contain the compiled form of the code. Besides, the compiled code depends on the MSR version used. Compile the code while the runtimes are down by going to `run-configurations/jcode-build` and running `run.bat`.
+Also, use an image for development and compilation that has the compiler included. For example, the slim images do not have the compiler included. With these you can develop flow code, but not java code.

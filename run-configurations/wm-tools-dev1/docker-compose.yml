@@ -10,6 +10,8 @@ services:
       # Our Code
       - ../../code/is-packages/WxSimpleConfig/:${GUEST_IS_HOME}/packages/WxSimpleConfig/
       - ../../code/is-packages/WxSimpleConfigTest/:${GUEST_IS_HOME}/packages/WxSimpleConfigTest/
+      - ../../code/is-packages/WzPAdvancedUtils/:${GUEST_IS_HOME}/packages/WzPAdvancedUtils/
+      - ../../code/is-packages/WzPAdvancedUtilsLocalTest/:${GUEST_IS_HOME}/packages/WzPAdvancedUtilsLocalTest/
       - ../../code/is-packages/WzPConfig/:${GUEST_IS_HOME}/packages/WzPConfig/
       - ../../code/is-packages/WzPConfigLocalTest/:${GUEST_IS_HOME}/packages/WzPConfigLocalTest/
       - ../../code/is-packages/WzPUtil/:${GUEST_IS_HOME}/packages/WzPUtil/

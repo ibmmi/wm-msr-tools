@@ -10,16 +10,16 @@ import com.wm.app.b2b.server.ServiceException;
 import com.wm.util.JournalLogger;
 // --- <<IS-END-IMPORTS>> ---
 
-public final class String
+public final class Strings
 
 {
 	// ---( internal utility methods )---
 
-	final static String _instance = new String();
+	final static Strings _instance = new Strings();
 
-	static String _newInstance() { return new String(); }
+	static Strings _newInstance() { return new Strings(); }
 
-	static String _cast(Object o) { return (String)o; }
+	static Strings _cast(Object o) { return (Strings)o; }
 
 	// ---( server methods )---
 
@@ -102,6 +102,7 @@ public final class String
 	private final static int LOG_CODE=4;
 	private final static int LOG_FACILITY=90;
 	private final static java.lang.String LOG_PREFIX="String Assertions";
+		
 	// --- <<IS-END-SHARED>> ---
 }
 

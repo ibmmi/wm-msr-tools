@@ -1,4 +1,4 @@
-package WzP.Util;
+package WzP.Util.Cast;
 
 // -----( IS Java Code Template v1.2
 
@@ -32,16 +32,16 @@ import java.net.UnknownHostException;
 import java.nio.ByteBuffer;
 // --- <<IS-END-IMPORTS>> ---
 
-public final class Cast
+public final class StringCastUtils
 
 {
 	// ---( internal utility methods )---
 
-	final static Cast _instance = new Cast();
+	final static StringCastUtils _instance = new StringCastUtils();
 
-	static Cast _newInstance() { return new Cast(); }
+	static StringCastUtils _newInstance() { return new StringCastUtils(); }
 
-	static Cast _cast(Object o) { return (Cast)o; }
+	static StringCastUtils _cast(Object o) { return (StringCastUtils)o; }
 
 	// ---( server methods )---
 
@@ -92,7 +92,7 @@ public final class Cast
 		// @sigtype java 3.5
 		// [i] field:0:optional integerString
 		// [o] object:0:optional integerObject
-		String	integerString = null;
+		String integerString = null;
 		boolean present = false;
 		Integer iObj = null;
 		
@@ -111,7 +111,6 @@ public final class Cast
 		IDataCursor pipelineCursor_1 = pipeline.getCursor();
 		IDataUtil.put( pipelineCursor_1, "integerObject", iObj );
 		pipelineCursor_1.destroy();
-			
 		// --- <<IS-END>> ---
 
                 

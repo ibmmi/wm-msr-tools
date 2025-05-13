@@ -1,0 +1,29 @@
+services:
+  msr:
+    image: ${CONTAINER_REGISTRY_URL}/${CONTAINER_IMAGE_REPOSITORY}:${CONTAINER_IMAGE_TAG}
+    ports:
+      - ${HOST_PORT_PREFIX}55:5555
+    hostname: wm-tools-dev2
+    volumes:
+      - ${HOST_MSR_LICENSE_FILE}:${GUEST_LICENSE_FILE_MOUNT_POINT}
+      - ./application.properties:${GUEST_APP_PROPS_MOUNT_POINT}
+      # Our Code
+      - ../../code/is-packages/WxSimpleConfig/:${GUEST_IS_HOME}/packages/WxSimpleConfig/
+      - ../../code/is-packages/WxSimpleConfigTest/:${GUEST_IS_HOME}/packages/WxSimpleConfigTest/
+      - ../../code/is-packages/WzPAdvancedUtils/:${GUEST_IS_HOME}/packages/WzPAdvancedUtils/
+      - ../../code/is-packages/WzPAdvancedUtilsLocalTest/:${GUEST_IS_HOME}/packages/WzPAdvancedUtilsLocalTest/
+      - ../../code/is-packages/WzPConfig/:${GUEST_IS_HOME}/packages/WzPConfig/
+      - ../../code/is-packages/WzPConfigLocalTest/:${GUEST_IS_HOME}/packages/WzPConfigLocalTest/
+      - ../../code/is-packages/WzPUtil/:${GUEST_IS_HOME}/packages/WzPUtil/
+      - ../../code/is-packages/WzPUtilLocalTest/:${GUEST_IS_HOME}/packages/WzPUtilLocalTest/
+      - ../../code/is-packages/WzTAssert/:${GUEST_IS_HOME}/packages/WzTAssert/
+      - ../../code/is-packages/WzTAssertLocalTest/:${GUEST_IS_HOME}/packages/WzTAssertLocalTest/
+      - ../../code/is-packages/WzTDataGen/:${GUEST_IS_HOME}/packages/WzTDataGen/
+      - ../../code/is-packages/WzTMocks/:${GUEST_IS_HOME}/packages/WzTMocks/
+      - ../../code/is-packages/WzTMocksLocalTest/:${GUEST_IS_HOME}/packages/WzTMocksLocalTest/
+      - ../../code/is-packages/WzTTools/:${GUEST_IS_HOME}/packages/WzTTools/
+      - ../../code/is-packages/WzTToolsLocalTest/:${GUEST_IS_HOME}/packages/WzTToolsLocalTest/
+    environment:
+      - SAG_IS_LICENSE_FILE=${GUEST_LICENSE_FILE_MOUNT_POINT}
+      - SAG_IS_CONFIG_PROPERTIES=${GUEST_APP_PROPS_MOUNT_POINT}
+      - GUEST_IS_HOME

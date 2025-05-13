@@ -416,7 +416,7 @@
 
   <!-- nodes -->
 
-<MAPINVOKE SERVICE="WzP.Util.Cast:booleanToString" VALIDATE-IN="$none" VALIDATE-OUT="$none" INVOKE-ORDER="0">
+<MAPINVOKE SERVICE="WzP.Util.Cast.StringCastUtils:booleanToString" VALIDATE-IN="$none" VALIDATE-OUT="$none" INVOKE-ORDER="0">
 
   <!-- nodes -->
 
